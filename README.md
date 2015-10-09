@@ -10,7 +10,7 @@
 
 
 ###Introduktion till uppgiften
-Att arbeta med HTML är du säkert redan bekant med. Det finns olika så kallade ("html template engines")[https://en.wikipedia.org/wiki/Web_template_system] som används för att, helst på ett förenklat och mer dynamiskt sätt, skapa HTML-kod utifrån specifika mallar. Användningsfall för detta är t.ex. när man renderar ut HTML från en serverbaserad webbapplikation eller när man använder så kallade ["static site generators"](https://staticsitegenerators.net/).
+Att arbeta med HTML är du säkert redan bekant med. Det finns olika så kallade ["html template engines"](https://en.wikipedia.org/wiki/Web_template_system) som används för att, helst på ett förenklat och mer dynamiskt sätt, skapa HTML-kod utifrån specifika mallar. Användningsfall för detta är t.ex. när man renderar ut HTML från en serverbaserad webbapplikation eller när man använder så kallade ["static site generators"](https://staticsitegenerators.net/).
 Det finns en mängd [olika template-motorer](https://en.wikipedia.org/wiki/Comparison_of_web_template_engines) t.ex. Jade, handlebars och liquid.
 
 Oftast skriver utvecklaren mallarna och sedan genereras HTML-kod utifrån dessa. I denna uppgift ska du dock gå andra hållet genom att läsa in
