@@ -3,7 +3,7 @@
 ***
 ###OBS! OBS! OBS!
 - Detta är en **obligatorisk** och **examinerande** uppgift som **du ska lösa helt på egen hand**.
-- Du måste göra **regelbundna "commits" och "pushes"** av koden till ditt repositorium för uppgiften för att kursledningen ska kunna följa ditt arbetet med uppgiften.
+- Du måste göra **regelbundna "commits" och "pushes"** av koden till ditt repositorium för uppgiften för att kursledningen ska kunna följa ditt arbete med uppgiften.
 - Du ska kunna förklara alla konstruktioner och satser som din lösning av uppgiften innehåller.
 
 ***
@@ -163,7 +163,7 @@ Om du analyserar objektet så kommer du att finna att många html-element har te
 Så finns det `\n` efter `<head>` följt av två mellanslag på nästa rad. Detta kommer att bli ett element i det komplexa javascriptobjektet, men vi vill inte skriva ut detta i vår Jade-representation. Därför måste vi filtrera bort dessa element när vi går igenom det komplexa javascriptobjektet. För att göra detta kan det vara bra att titta på funktionen [`trim()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim).
 
 Din uppgift blir alltså främst att skriva koden i filerna node.js och treeview.js. Hur du väljer att strukturera upp det
-är upp till dig men vissa saker kommer de tester som finns styra. I exemplet ovan har vi en stryktur som är 7 nivåer djup. I HTML kan vi dock göra oändligt djupa strukturer så för att lösa denna laborationsuppgift kommer du att behöva använda konstruktionen [rekursion](http://eloquentjavascript.net/03_functions.html#h_jxl1p970Fy).
+är upp till dig men vissa saker kommer de tester som finns styra. I exemplet ovan har vi en struktur som är 7 nivåer djup. I HTML kan vi dock göra oändligt djupa strukturer så för att lösa denna laborationsuppgift kommer du att behöva använda konstruktionen [rekursion](http://eloquentjavascript.net/03_functions.html#h_jxl1p970Fy).
 
 ####Node.js
 I denna fil ska du skriva kod som ger möjlighet att skapa objekt av typen *Node*. Konstruktorn ska ta tre olika parametrar,
@@ -178,7 +178,7 @@ Om Node representerar den enskilda noden i dokumentet så representerar TreeView
 är att handha *en array innehållande objekt av typen Node* (sorterade i den ordning de förekommer i dokumentet). Dessa noder skapas via typen Node
 och detta görs i metoden *generateNodeObjects* som tar det komplexa javascriptobjektet du ska analysera som inparameter. generateNodeObjects skapar utifrån detta Node-instanser.
 
-Objektet ska också ha metoden *toString* som returnerar en sträng som representerar hela jadedokumentet tillskillnad från toString i Node som enbart representerade en node.
+Objektet ska också ha metoden *toString* som returnerar en sträng som representerar hela jadedokumentet till skillnad från toString i Node som enbart representerade en node.
 
 ##tl;dr
 Givet är ett objekt N som motsvarar en HTML-struktur. Objektet innehåller bland annat *name* (string), *type* (string) och en array *children* där varje element är av typen N. Skapa en sträng som motsvarar Jade-strukturen av detta objekt. Typen Node ska motsvara ett objekt N och TreeView ska ge outputen av samtliga (undantaget "tomma" `\n   `) N.
