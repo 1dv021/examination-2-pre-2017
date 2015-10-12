@@ -44,7 +44,6 @@ describe("TreeView", function() {
                     var str = "doctype html\nhtml\n\thead\n\t\ttitle Detta är en titel\n\tbody\n\t\th1 Detta är en rubrik\n\t\tdiv\n\t\t\tul\n\t\t\t\tli Hem\n\t\t\t\tli Kontakt\n\t\t\t\tli Kontakt\n\t\t\t\tli Kontakt\n\t\t\t\tli Kontakt\n\t\tdiv\n\t\t\tp Detta är ett stycke\n\t\t\t\tspan Som innehåller ett element\n\t\t\th1 Detta är en rubrik\n\t\t\tp.\n\t\t\t\tDetta är ett stycke\n\t\t\t\tmed\n\t\t\t\tmånga\n\t\t\t\trader\n";
 
                     expect(treeView.toString()).to.equal(str);
-                    console.log(treeView.toString());
                     done();
                 });
             });
