@@ -24,26 +24,27 @@ Din uppgift är att implementera typerna `ToDoItem`och `ToDoList` enligt ställd
 
 #### Konstruktor
 
-Vid instansiering av objekt av typen `TodoItem`ska det vara möjligt att skicka med en sträng som beskriver uppgiften, ett `Date`-objekt innehållande förfallodatumet samt eventuellt ett `Date`-objekt innehållande genomförandedatumet.
+Vid instansiering av objekt av typen `ToDoItem`ska det vara möjligt att skicka med en sträng som beskriver uppgiften, ett `Date`-objekt innehållande förfallodatumet samt eventuellt ett `Date`-objekt innehållande genomförandedatumet.
 
 #### Egenskaper
+
 | Egenskap | Typ | Beskrivning | Krav
-| -- | -- | -- | -- |
-| `text` | string | Sätter/ger texten på uppgiften. | 1 till 50 tecken. |
-| `dueDate` | Date | Sätter/ger förfallodatumet för uppgiften. | `Date`-objekt med giltigt datum. |
-| `finishedDate` | Date, undefined | Sätter/ger genomförandedatumet för uppgiften. | `Date`-objekt med giltigt datum eller `undefined`.   |
-| `isDone` | boolean | Ger ett värde som indikerar om uppgiften är genomförd. | _"read-only"_ |
-| `isOverdue` | boolean | Ger ett värde som indikerar om uppgiften är/blev försenad. | _"read-only"_ |
+| --- | --- | --- | --- |
+| `text` | `string` | Sätter/ger texten på uppgiften. | 1 till 50 tecken. |
+| `dueDate` | `Date` | Sätter/ger förfallodatumet för uppgiften. | `Date`-objekt med giltigt datum. |
+| `finishedDate` | `Date`, `undefined` | Sätter/ger genomförandedatumet för uppgiften. | `Date`-objekt med giltigt datum eller `undefined`.   |
+| `isDone` | `boolean` | Ger ett värde som indikerar om uppgiften är genomförd. | _"read-only"_ |
+| `isOverdue` | `boolean` | Ger ett värde som indikerar om uppgiften är/blev försenad. | _"read-only"_ |
 
 Samtliga egenskaper ska implementeras med hjälp av _"getters"_ och, vid behov, _"setters"_. Det ska bara gå att tilldela egenskaperna värden som är av respektive egenskaps angivna typ(er). Vid försök att tilldela en egenskap ett värde som inte är av angiven typ ska ett undantag av typen `TypeError` kastas. Uppfylls inte andra ställda krav ska ett undantag av typen `Error` kastas.
 
 #### Metoder
 
 | Egenskap | Returtyp | Beskrivning | Krav |
-| -- | -- | -- | -- |
-| `clone()` | ToDoItem | Skapar ett nytt objekt som är en kopia av aktuell instans. | Måste returnera en exakt kopia utan några som helst kopplingar till originalet. |
-| `toJson()` | string | Konverterar aktuell instans till en JSON-sträng. | Uppgifts text, förfallodatum och i förekommande fall genomförandedatum. |
-| `toString()` | string | Returnerar en sträng representerande aktuell instans. | Uppgift som är försenad ska inledas med `'* '`, annars med `'  '`, innan namnet på uppgiften och därpå följande datum separerade med mellanslag.|
+| --- | --- | --- | --- |
+| `clone()` | `ToDoItem` | Skapar ett nytt objekt som är en kopia av aktuell instans. | Måste returnera en exakt kopia utan några som helst kopplingar till originalet. |
+| `toJson()` | `string` | Konverterar aktuell instans till en JSON-sträng. | Uppgifts text, förfallodatum och i förekommande fall genomförandedatum. |
+| `toString()` | `string` | Returnerar en sträng representerande aktuell instans. | Uppgift som är försenad ska inledas med `'* '`, annars med `'  '`, innan namnet på uppgiften och därpå följande datum separerade med mellanslag.|
 
 Samtliga metoder ska vara kopplade till typens prototyp.
 
@@ -77,23 +78,23 @@ Vid instansiering av objekt av typen `ToDoList`ska det vara möjligt att skicka 
 #### Egenskaper
 
 | Egenskap | Typ | Beskrivning | Krav
-| -- | -- | -- | -- |
-| `name` | string | Sätter/ger namnet på listan. | 1 till 30 tecken. |
-| `color` | string | Sätter/ger färgen på listan. | 1 till 20 tecken. |
-| `toDoItems` | ToDoItem[] | Sätter/ger en array innehållande referenser till `ToDoItem`-objekt. | Måste vara en array, tom eller enbart innehållande  referenser till `ToDoItem`-objekt. Ska vara sorterad i på förfallodatum i stigande ordning. |
-| `hasOverdue` | boolean | Ger ett värde som indikerar om listan innehåller en, eller flera, uppgifter som är/blev försenad(e). | _"read-only"_ |
+| --- | --- | --- | --- |
+| `name` | `string` | Sätter/ger namnet på listan. | 1 till 30 tecken. |
+| `color` | `string` | Sätter/ger färgen på listan. | 1 till 20 tecken. |
+| `toDoItems` | `ToDoItem[]` | Sätter/ger en array innehållande referenser till `ToDoItem`-objekt. | Måste vara en array, tom eller enbart innehållande  referenser till `ToDoItem`-objekt. Ska vara sorterad i på förfallodatum i stigande ordning. |
+| `hasOverdue` | `boolean` | Ger ett värde som indikerar om listan innehåller en, eller flera, uppgifter som är/blev försenad(e). | _"read-only"_ |
 
 Samtliga egenskaper ska implementeras med hjälp av _"getters"_ och, vid behov, _"setters"_. Det ska bara gå att tilldela egenskaperna värden som är av respektive egenskaps angivna typ(er). Vid försök att tilldela en egenskap ett värde som inte är av angiven typ ska ett undantag av typen `TypeError` kastas. Uppfylls inte andra ställda krav ska ett undantag av typen `Error` kastas.
 
 #### Metoder
 
 | Egenskap | Returtyp | Beskrivning | Krav |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | `add(toDoItem)` |  | Lägger till en ny uppgift till listan. | Uppgifterna måste vara sorterad på förfallodatum efter att den nya uppgiften lagts till. |
 | `removeFinished()` |  | Tar bort alla uppgifter som är genomförda. |  |
-| `clone()` | ToDoList | Skapar ett nytt objekt som är en kopia av aktuell instans. | Måste returnera en exakt kopia utan några som helst kopplingar till originalet. |
-| `toJson()` | string | Konverterar aktuell instans till en JSON-sträng. | Uppgifts namn, färg och i förekommande fall uppgifter. |
-| `toString()` | string | Returnerar en sträng representerande aktuell instans. | Listans namn, som ska inleda listan, ska avslutas med `' *'` om den innehåller uppgift som är försenad. Varje uppgift i listan ska sedan presenteras på enskilda rader.|
+| `clone()` | `ToDoList` | Skapar ett nytt objekt som är en kopia av aktuell instans. | Måste returnera en exakt kopia utan några som helst kopplingar till originalet. |
+| `toJson()` | `string` | Konverterar aktuell instans till en JSON-sträng. | Uppgifts namn, färg och i förekommande fall uppgifter. |
+| `toString()` | `string` | Returnerar en sträng representerande aktuell instans. | Listans namn, som ska inleda listan, ska avslutas med `' *'` om den innehåller uppgift som är försenad. Varje uppgift i listan ska sedan presenteras på enskilda rader.|
 
 Samtliga metoder ska vara kopplade till typens prototyp.
 
