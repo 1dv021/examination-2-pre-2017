@@ -123,6 +123,8 @@ console.log(list.toString());
 //   åka till OS i Stockholm 2026-08-03
 //   köpa julklappar 2032-12-24
 ```
+><i class="fa fa-warning"></i> __OBS!__ Datumformatet kan variera beroende på hur din dator är konfigurerad.
+
 ## <i class="fa fa-lightbulb-o"></i> Tips
 Genom att köra testerna som kommer med examinationsuppgiften kan du undersöka om koden du skrivit löst uppgiften (i alla fall enligt testerna, __som inte är heltäckande...__).
 
