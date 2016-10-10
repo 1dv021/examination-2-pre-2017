@@ -2,7 +2,7 @@
  * Tests for the ToDoList type.
  *
  * @author Mats Loock
- * @version 1.16.0
+ * @version 1.16.1
  */
 
 'use strict';
