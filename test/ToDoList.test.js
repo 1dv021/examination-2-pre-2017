@@ -305,7 +305,7 @@ describe('ToDoList', () => {
 
     describe('toJson method', () => {
       it('should be defined', (done) => {
-        expect(ToDoItem.prototype).to.have.property('toJson').that.is.a('Function');
+        expect(ToDoList.prototype).to.have.property('toJson').that.is.a('Function');
         done();
       });
 
@@ -322,8 +322,8 @@ describe('ToDoList', () => {
 
     describe('toString method', () => {
       it('should be defined', (done) => {
-        expect(ToDoItem.prototype).to.have.ownProperty('toString');
-        expect(ToDoItem.prototype).to.have.property('toString').that.is.a('Function');
+        expect(ToDoList.prototype).to.have.ownProperty('toString');
+        expect(ToDoList.prototype).to.have.property('toString').that.is.a('Function');
         done();
       });
 
